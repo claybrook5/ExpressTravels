@@ -1,0 +1,71 @@
+/* Intro Section Styling */
+.intro {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 24px;
+    color: #004080;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    font-size: 16px;
+    color: #333;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+/* Contact Form Styling */
+.contact-form {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+form input[type="submit"] {
+    background-color: #004080;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #003366;
+}
+
+/* Disclaimer Section */
+.disclaimer {
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    background-color: #bae1e8;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1000;
+    font-size: 14px;
+}

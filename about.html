@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book affordable and customizable vacation packages with Express Holidays. Explore the best holiday destinations around the world.">
+    <meta name="keywords" content="vacation packages, affordable holidays, Express Holidays, travel deals">
+    <title>Express Travel - Affordable Vacation Packages</title>
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/ExpressLogo.png" alt="Express Travel Logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li>
+                    <a href="#">Destinations</a>
+                    <ul class="dropdown">
+                        <li><a href="hawaii.html">Hawaii</a></li>
+                        <li><a href="paris.html">Paris</a></li>
+                        <li><a href="tokyo.html">Tokyo</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+		<h1>About Us</h1>
+        <section class="video-section">
+			<!-- Embed YouTube Video -->
+			<div class="video-container">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/4PgrG1XYkLQ?si=FkZ-16hSMjwHhojF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+			</div>
+		</section>
+
+		<!-- Our Story Section -->
+		<section class="our-story">
+			<h2>Our Story</h2>
+			<p>At Express Travel, our mission is to create unforgettable travel experiences tailored to your needs. Founded by a team of passionate travel enthusiasts, we strive to make every journey unique and memorable. With years of experience and a network of global partners, we are dedicated to providing exceptional service and personalized travel solutions.</p>
+		</section>
+	
+
+		<!-- Why Choose Us Section -->
+		<section class="why-choose-us">
+			<h2>Why Express Travel?</h2>
+			<ol>
+				<li><b>Tailored Experiences:</b> We create personalized travel packages that match your unique interests and needs, from luxurious getaways to budget adventures.</li>
+				<li><b>Expert Knowledge:</b> Our experienced travel specialists provide insider tips and local insights to enhance your journey</li>
+				<li><b>Exceptional Service:</b> Enjoy 24/7 customer support for a smooth and stress-free travel experience from start to finish.</li>
+			</ol>
+		</section>
+
+		<!-- Our Destinations Section -->
+		<section class="our-destinations">
+			<h2>Our Destinations</h2>
+			<ul>
+                <li><a href="hawaii.html">Hawaii</a></li>
+                <li><a href="paris.html">Paris</a></li>
+                <li><a href="tokyo.html">Tokyo</a></li>
+			</ul>
+		</section>
+    </main>
+    
+    <!-- Disclaimer Section -->
+    <section class="disclaimer">
+        <p><em>This is a fictional site for educational purposes and does not offer travel services.</em></p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; www.expresstravel.com - 2024</p>
+    </footer>
+
+    <!-- JavaScript for Banner Slideshow -->
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.banner-slide');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = i === index ? 'block' : 'none';
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        // Initialize the first slide and start the automatic slideshow
+        showSlide(currentSlide);
+        setInterval(nextSlide, 5000); // Change slide every 5 seconds
+    </script>
+</body>
+</html>

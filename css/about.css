@@ -1,0 +1,141 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #004080;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 100px; /* Adjust the size of the logo */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #003366;
+    border-radius: 5px;
+	margin-bottom: 20px;
+}
+
+nav ul li ul.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #004080;
+    border-radius: 5px;
+}
+
+nav ul li:hover ul.dropdown {
+    display: block;
+}
+
+nav ul li ul.dropdown li {
+    width: 100px;
+}
+
+main {
+	margin-top: 160px;
+}
+
+main h1 {
+	margin-top: 20px;
+}
+
+/* Video Section */
+.video-section {
+    width: 100%;
+    overflow: hidden; /* Ensures that nothing overflows */
+}
+
+.video-container {
+    width: 100%;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 315px; /* Set height or adjust as needed */
+}
+
+/* Our Story Section */
+.our-story {
+    width: 100%;
+    padding: 20px; /* Adjust padding as needed */
+    background-color: #f9f9f9; /* Optional background color */
+}
+
+/* Style for the "our-destinations" section */
+.our-destinations {
+    width: 50%; /* Ensure it takes up half of the container */
+    border: 2px solid #25b5d2; /* Add a border with the specified color */
+    padding: 15px; /* Add some padding inside the section */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+	margin-bottom: 60px;
+}
+
+/* Remove bullets and align text to the left in lists within "our-destinations" */
+.our-destinations ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove default padding */
+}
+
+.our-destinations li {
+    text-align: left; /* Align text to the left */
+    margin-bottom: 10px; /* Optional: Add space between list items */
+}
+
+.disclaimer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: #bae1e8;
+    border: 2px solid #bae1e8;
+    border-radius: 8px;
+    padding: 10px;
+    width: 30%;
+    text-align: center;
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+footer {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

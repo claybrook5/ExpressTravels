@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book affordable and customizable vacation packages with Express Holidays. Explore the best holiday destinations around the world.">
+    <meta name="keywords" content="vacation packages, affordable holidays, Express Holidays, travel deals">
+    <meta name="author" content="Express Travel">
+    <title>Express Travel - Affordable Vacation Packages</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <a href="index.html" aria-label="Home">
+                <img src="images/ExpressLogo.png" alt="Express Travel Logo" loading="lazy">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" aria-label="Home">Home</a></li>
+                <li><a href="about.html" aria-label="About Us">About Us</a></li>
+                <li>
+                    <a href="#" aria-label="Destinations">Destinations</a>
+                    <ul class="dropdown">
+                        <li><a href="hawaii.html" aria-label="Hawaii">Hawaii</a></li>
+                        <li><a href="paris.html" aria-label="Paris">Paris</a></li>
+                        <li><a href="tokyo.html" aria-label="Tokyo">Tokyo</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html" aria-label="Contact Us">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="banner">
+        <div class="banner-container">
+            <div class="banner-slide">
+                <img src="images/ExpressBanner1.png" alt="Travel Banner 1" loading="lazy">
+            </div>
+            <div class="banner-slide">
+                <img src="images/ExpressBanner2.png" alt="Travel Banner 2" loading="lazy">
+            </div>
+        </div>
+        <div class="cta">
+            <a href="about.html" class="btn">Explore</a>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <main>
+        <section class="intro">
+            <h1>Express Travel</h1>
+            <p>Welcome to Express Travel, where your journey begins with a promise of adventure, comfort, and unparalleled service. Founded in 2014, Express Travel was born out of a passion for discovering new places and creating unforgettable experiences...</p>
+        </section>
+
+        <section class="why-choose-us">
+            <h2>Why Choose Us?</h2>
+            <ol>
+				<li><b>Tailored Experiences:</b> We create personalized travel packages...</li>
+				<li><b>Expert Knowledge:</b> Our experienced travel specialists provide...</li>
+				<li><b>Exceptional Service:</b> Enjoy 24/7 customer support...</li>
+			</ol>
+        </section>
+
+        <section class="our-destinations">
+            <h2>Explore Our Destinations</h2>
+            <div class="destination-grid">
+                <a href="hawaii.html" class="destination-item">
+                    <img src="images/Hawaii2.png" alt="Hawaii">
+                    <h3>Hawaii</h3>
+                </a>
+                <a href="tokyo.html" class="destination-item">
+                    <img src="images/Tokyo2.png" alt="Tokyo">
+                    <h3>Tokyo</h3>
+                </a>
+                <a href="paris.html" class="destination-item">
+                    <img src="images/Paris2.png" alt="Paris">
+                    <h3>Paris</h3>
+                </a>
+
+            </div>
+        </section>
+        
+        <section class="disclaimer">
+            <h2>Disclaimer</h2>
+            <p>This is a fictional site for educational purposes and does not offer travel services.</p>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; www.expresstravel.com - 2024</p>
+    </footer>
+
+    <!-- JavaScript for Banner Slideshow -->
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.banner-slide');
+            const totalSlides = slides.length;
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.style.display = i === index ? 'block' : 'none';
+                });
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                showSlide(currentSlide);
+            }
+
+            // Initialize the first slide and start the automatic slideshow
+            showSlide(currentSlide);
+            setInterval(nextSlide, 5000); // Change slide every 5 seconds
+        });
+    </script>
+</body>
+</html>

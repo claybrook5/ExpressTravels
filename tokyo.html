@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book affordable and customizable vacation packages with Express Holidays. Explore the best holiday destinations around the world.">
+    <meta name="keywords" content="vacation packages, affordable holidays, Express Holidays, travel deals">
+    <title>Express Travel - Affordable Vacation Packages</title>
+    <link rel="stylesheet" href="css/destinations.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/ExpressLogo.png" alt="Express Travel Logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li>
+                    <a href="#">Destinations</a>
+                    <ul class="dropdown">
+                        <li><a href="hawaii.html">Hawaii</a></li>
+                        <li><a href="paris.html">Paris</a></li>
+                        <li><a href="tokyo.html">Tokyo</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <h1>Tokyo</h1>
+        <p>Learn about the fantastic City of Tokyo, where one can meet both succumbing to the traditions and futuristic tendencies. Discover the night lights, shrines, and the local delicious dishes. In many ways, Tokyo can be described as a City between the traditional and the contemporary. It is a City that boasts both futuristic and traditional infrastructure, ranging from the central business district of Shibuya to the well-maintained lawns of the Imperial Palace.</p>
+		<p>Visit large and famous temples and shrines, such as Meiji Shrine and Senso-ji Temple, surrounded by signs of modern development. Experience shopping in energetic districts such as Shibuya and Shinjuku, and taste the delicious dishes of Japan. Tokyo is a dynamic City that will present endless amusement and fun activities. </p>
+        
+        <!-- Carousel for Images -->
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="images/Tokyo1.png" alt="Tokyo Image 1">
+                <img src="images/Tokyo2.png" alt="Tokyo Image 2">
+                <img src="images/Tokyo3.png" alt="Tokyo Image 3">
+                <img src="images/Tokyo4.png" alt="Tokyo Image 4">
+            </div>
+            <button class="carousel-prev">←</button>
+            <button class="carousel-next">→</button>
+        </div>
+
+        <section class="disclaimer">
+            <h2>Disclaimer</h2>
+            <p>This is a fictional site for educational purposes and does not offer travel services.</p>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; www.expresstravel.com - 2024</p>
+    </footer>
+
+    <!-- JavaScript for Carousel -->
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel-images img');
+        const totalImages = images.length;
+
+        document.querySelector('.carousel-next').addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalImages;
+            updateCarousel();
+        });
+
+        document.querySelector('.carousel-prev').addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            updateCarousel();
+        });
+
+        function updateCarousel() {
+            const offset = -currentIndex * 100;
+            document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`;
+        }
+
+        // Auto-play the carousel every 5 seconds
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % totalImages;
+            updateCarousel();
+        }, 5000);
+    </script>
+</body>
+</html>
